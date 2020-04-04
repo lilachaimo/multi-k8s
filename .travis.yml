@@ -3,20 +3,20 @@ services:
  - docker
 
 before_install: 
- - docker build -t lilachaimo/react-test -f ./client/Dockerfile.dev ./client
+ - docker build -t lilachyonash/react-test -f ./client/Dockerfile.dev ./client
  
 script:
  - docker run lilachaimo/react-test npm test -- --coverage
  
 after_success:
- - docker build -t lilachaimo/multi-client ./client
- - docker build -t lilachaimo/multi-nginx ./nginx
- - docker build -t lilachaimo/multi-server ./server
- - docker build -t lilachaimo/multi-worker ./worker
+ - docker build -t lilachyonash/multi-client ./client
+ - docker build -t lilachyonash/multi-nginx ./nginx
+ - docker build -t lilachyonash/multi-server ./server
+ - docker build -t lilachyonash/multi-worker ./worker
  
  - echo "$DOCKER_PASSWORD" | docker login -u "$Docker_ID" --password-s
 
- - docker push lilachaimo/multi-client
- - docker push lilachaimo/multi-nginx
- - docker push lilachaimo/multi-server
- - docker push lilachaimo/multi-worker
+ - docker push lilachyonash/multi-client
+ - docker push lilachyonash/multi-nginx
+ - docker push lilachyonash/multi-server
+ - docker push lilachyonash/multi-worker
