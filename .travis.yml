@@ -14,7 +14,7 @@ after_success:
  - docker build -t lilachyonash/multi-server ./server
  - docker build -t lilachyonash/multi-worker ./worker
  
- - echo "$DOCKER_PASSWORD" | docker login -u "$Docker_ID" --password-s
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-s
 
  - docker push lilachyonash/multi-client
  - docker push lilachyonash/multi-nginx
