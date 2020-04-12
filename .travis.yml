@@ -28,6 +28,7 @@ deploy:
  env: MultiDocker-env
  bucket_name: elasticbeanstalk-us-east-2-052923066405
  bucket_path: docker-multi
+ edge: true
  on:
   branch: master
  access_key_id: $AWS_ACCESS_KEY
