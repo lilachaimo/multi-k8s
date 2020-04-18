@@ -1,3 +1,4 @@
+skip_cleanup: true
 docker build -t lilachyonash/multi-client:latest -t lilachyonash/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t lilachyonash/multi-server:latest -t lilachyonash/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t lilachyonash/multi-worker:latest -t lilachyonash/multi-worker:$SHA -f ./worker/Dockerfile ./worker
